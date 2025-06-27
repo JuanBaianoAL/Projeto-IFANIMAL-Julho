@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cadastrar Gato</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <h1>Cadastrar Novo Gato</h1>
+  <form action="/pets" method="POST">
+    <label for="nome">Nome:</label><br />
+    <input type="text" id="nome" name="nome" required /><br /><br />
+
+    <label for="raca">Raça:</label><br />
+    <input type="text" id="raca" name="raca" /><br /><br />
+
+    <label for="idade">Idade:</label><br />
+    <input type="number" id="idade" name="idade" /><br /><br />
+
+    <label for="sexo">Sexo:</label><br />
+    <select id="sexo" name="sexo" required>
+      <option value="Macho">Macho</option>
+      <option value="Fêmea">Fêmea</option>
+    </select><br /><br />
+
+    <label for="cadastro">Cadastro:</label><br />
+    <select id="cadastro" name="cadastro">
+      <option value="0">Não</option>
+      <option value="1">Sim</option>
+    </select><br /><br />
+
+    <label for="cuidados">Cuidados:</label><br />
+    <input type="text" id="cuidados" name="cuidados" /><br /><br />
+
+    <label for="deficiencia">Deficiência:</label><br />
+    <input type="text" id="deficiencia" name="deficiencia" /><br /><br />
+
+    <label for="castracao">Castrado:</label><br />
+    <select id="castracao" name="castracao">
+      <option value="0">Não</option>
+      <option value="1">Sim</option>
+    </select><br /><br />
+
+    <label for="vacinacao">Vacinado:</label><br />
+    <select id="vacinacao" name="vacinacao">
+      <option value="0">Não</option>
+      <option value="1">Sim</option>
+    </select><br /><br />
+
+    <button type="submit">Cadastrar</button>
+    <a href="/" class="voltar-btn2">Cancelar</a>
+  </form>
+</body>
+</html>

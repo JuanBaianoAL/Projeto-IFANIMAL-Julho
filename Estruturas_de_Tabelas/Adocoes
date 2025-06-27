@@ -1,0 +1,10 @@
+CREATE TABLE Adocoes (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nomeAdotante VARCHAR(100),
+    petId INT,
+    status VARCHAR(50),
+    data DATE,
+    createdAt DATETIME,
+    updatedAt DATETIME,
+    FOREIGN KEY (petId) REFERENCES Pets(id_pet)
+);

@@ -1,0 +1,35 @@
+<head>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+
+<h1>Cadastro de Adoção</h1>
+
+<form action="/adocoes" method="POST">
+  <input type="text" name="nomeAdotante" placeholder="Seu nome" required>
+
+  <select name="petId" required>
+    <option value="">Selecione um pet para adoção</option>
+    <% petsDisponiveis.forEach(pet => { %>
+      <option value="<%= pet.id_pet %>">
+        <%= pet.nome %> - <%= pet.raca %> - <%= pet.idade %> anos
+      </option>
+    <% }) %>
+  </select>
+
+  <input type="text" name="status" value="pendente" hidden>
+  <button type="submit">Cadastrar</button>
+  <a href="/" class="voltar-btn2">Cancelar</a>
+</form>
+
+<h3>Adoções Registradas</h3>
+<ul>
+  <% adocoes.forEach(adocao => { %>
+    <li>
+      <%= adocao.nomeAdotante %> adotou o gato 
+      "<%= adocao.pet ? adocao.pet.nome : 'Desconhecido' %>", 
+      raça: <%= adocao.pet ? adocao.pet.raca : 'Desconhecida' %>, 
+      idade: <%= adocao.pet ? adocao.pet.idade : 'Desconhecida' %> anos
+      sexo: <%= adocao.pet ? adocao.pet.sexo : 'Desconhecida' %>
+    </li>
+  <% }) %>
+</ul>

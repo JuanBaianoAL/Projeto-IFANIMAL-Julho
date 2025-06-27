@@ -1,0 +1,14 @@
+CREATE TABLE Pets (
+    id_pet INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100),
+    raca VARCHAR(100),
+    idade INT,
+    cadastro DATE,
+    cuidados TEXT,
+    deficiencia BOOLEAN,
+    castracao BOOLEAN,
+    vacinacao BOOLEAN,
+    id_usuario INT,
+    createdAt DATETIME,
+    updatedAt DATETIME
+);

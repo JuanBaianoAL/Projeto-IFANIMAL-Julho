@@ -1,0 +1,30 @@
+<head>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+
+<h1>Cadastro de Doação</h1>
+<form action="/doacoes" method="POST">
+  <label for="tipo">Tipo:</label>
+  <input type="text" name="tipo" id="tipo" required>
+
+  <label for="quantidade">Quantidade:</label>
+  <input type="number" name="quantidade" id="quantidade" required>
+
+  <label for="status">Status:</label>
+  <input type="text" name="status" id="status" value="Pendente">
+
+  <button type="submit">Doar</button>
+  <a href="/" class="voltar-btn2">Cancelar</a>
+</form>
+
+<h3>Doações Registradas</h3>
+<ul>
+  <% doacoes.forEach(doacao => { %>
+    <li>
+      <strong><%= doacao.tipo %></strong> - 
+      Quantidade: <%= doacao.quantidade %> - 
+      Status: <%= doacao.status %> - 
+      Data: <%= doacao.data ? new Date(doacao.data).toLocaleDateString('pt-BR') : 'Sem data' %>
+    </li>
+  <% }) %>
+</ul>

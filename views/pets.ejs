@@ -1,0 +1,29 @@
+<head>
+  <link rel="stylesheet" href="/styles.css"> 
+</head>
+<body>
+  <h1>Lista de Gatos</h1>
+  <ul>
+  <% pets.forEach(pet => { %>
+    <li>
+      Nome: <%= pet.nome %><br>
+      Raça: <%= pet.raca %><br>
+      Idade: <%= pet.idade %> anos<br>
+      Sexo: <%= pet.sexo %><br>
+      Cadastro: <%= pet.cadastro ? 'Sim' : 'Não' %><br>
+      Cuidados: <%= pet.cuidados %><br>
+      Deficiência: <%= pet.deficiencia %><br>
+      Castrado: <%= pet.castracao ? 'Sim' : 'Não' %><br>
+      Vacinado: <%= pet.vacinacao ? 'Sim' : 'Não' %><br>
+      <div class="botao_excluir">
+      <form action="/pets/excluir" method="POST">
+        <input type="hidden" name="id_pet" value="<%= pet.id_pet %>">
+        <button type="submit" class="voltar-btn2" onclick="return confirm('Confirma a exclusão deste pet?')" class="btn-excluir">Excluir</button>
+      </form>
+      <div>
+    </li>
+  <% }); %>
+  </ul>
+
+  <a href="/" class="voltar-btn">Voltar</a>
+</body>

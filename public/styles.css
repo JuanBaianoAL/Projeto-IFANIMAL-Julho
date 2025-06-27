@@ -1,0 +1,106 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f9f0;
+  color: #1b3e1b;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  color: #1b5e20;
+  text-align: center;
+}
+
+form {
+  background-color: #ffffff;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 100, 0, 0.2);
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input, select, button {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #b2dfdb;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #388e3c;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2e7d32;
+}
+
+ul {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 0;
+  list-style-type: none;
+}
+
+li {
+  background-color: #e8f5e9;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-left: 5px solid #66bb6a;
+  border-radius: 5px;
+}
+
+a {
+  color: #2e7d32;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+p {
+  text-align: center;
+}
+
+.voltar-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.voltar-btn:hover {
+  background-color: #45a049;
+}
+.voltar-btn2 {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 8px 16px;
+  background-color: red;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+.voltar-btn2:hover{
+  background-color: red;
+}
